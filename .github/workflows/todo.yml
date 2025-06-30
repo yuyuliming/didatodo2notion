@@ -29,10 +29,6 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-      - name: 写入secrets到secrets.txt
-        run: |
-          echo "NOTION_TOKEN=${NOTION_TOKEN}" > secrets.txt
-          echo "NOTION_PAGE=${NOTION_PAGE}" >> secrets.txt
       - name: todo sync
         run: |
           todo
